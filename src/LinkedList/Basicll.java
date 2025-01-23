@@ -8,6 +8,16 @@ public class Basicll {
             temp =temp.next;
         }
     }
+
+    public static  int length(Node head){
+        Node temp =head;
+        int count =0;
+        while (temp!=null){
+            count++;
+            temp=temp.next;
+        }
+        return count;
+    }
     public static class Node{
         int data ;
         Node next;
@@ -28,13 +38,19 @@ public class Basicll {
         c.next =d;
         d.next =e;
 
-        Node temp =a;
+//        Node temp =a;
+//        for(int i =0;i<6;i++){
+//            System.out.print(temp.data +" ");
+//            temp =temp.next;
+//        }
 
 //        while(temp !=null){
 //            System.out.println(temp.data);
 //            temp =temp.next;
 //        }
         display(a);
+        System.out.println();
+        System.out.println(length(a));
 
     }
 }
